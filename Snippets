@@ -1,0 +1,195 @@
+
+//Readline Sync (prompting the user to enter input)
+const input = require('readline-sync');
+let info = input.question("Question text... ");
+
+//for loop
+for (let i = 0; i < array.length; i++) {
+  console.log(i);
+}
+
+//while loop
+let i = 0;
+while (i < 51) {
+   console.log(i);
+   i++;
+}
+
+//template literals
+let author = Sri Chinmoy;
+let poem = `The mind chases happiness.
+The heart creates happiness.
+The soul is happiness
+And it spreads happiness
+All-where.
+– ${author}`;
+console.log(poem);
+
+
+
+//multidimensional arrays
+
+//To apply a method to the outer array, the syntax is:
+multiArrayName.method();
+
+//To apply a method to one of the inner arrays, the syntax is:
+multiArrayName[indexOfInnerArray].method();
+
+//example:
+let shuttleCrews = [
+  ['Robert Gibson', 'Mark Lee', 'Mae Jemison'],
+  ['Kent Rominger', 'Ellen Ochoa', 'Bernard Harris'],
+  ['Eilen Collins', 'Winston Scott',  'Catherin Coleman']
+];
+
+let newCrew = ['Mark Polansky', 'Robert Curbeam', 'Joan Higginbotham'];
+
+// Add a new crew array to the end of shuttleCrews
+shuttleCrews.push(newCrew);
+console.log(shuttleCrews[3][2]);
+
+// Reverse the order of the crew at index 1
+shuttleCrews[1].reverse();
+console.log(shuttleCrews[1]);
+
+//console output:
+Joan Higginbotham
+[ 'Bernard Harris', 'Ellen Ochoa', 'Kent Rominger' ]
+
+
+//accessing multidimensional arrays
+let element1 = ['hydrogen', 'H', 1.008];
+let element2 = ['helium', 'He', 4.003];
+let element26 = ['iron', 'Fe', 55.85];
+console.log(table[1], table[1][1]);
+
+
+
+
+
+//named function
+function myFunction(parameter1, parameter2,..., parameterN) {
+}
+
+//annoymous functions
+let add = function(a, b) {
+  return a + b;
+};
+
+console.log(add(1, 1));
+
+
+//reverse function
+function reverse(str) {
+  let reversed = '';
+
+  for (let i = 0; i < str.length; i++) {
+      reversed = str[i] + reversed;
+  }
+
+  return reversed;
+}
+
+function reverse(str) {
+  let lettersArray = str.split('');
+  let reversedLettersArray = lettersArray.reverse();
+  return reversedLettersArray.join('');
+}
+
+
+// Logging errors
+
+const input = require('readline-sync');
+let userInput = input.question("Please enter a number:");
+let logger = function(errorMsg) {
+  console.log("ERROR: " + errorMsg);
+};
+if (userInput < 0) {
+  // ______("Invalid input");
+}
+
+
+//mapping
+
+let nums = [3.14, 42, 4811];
+
+let timesTwo = function (n) {
+    return n*2;
+};
+
+let doubled = nums.map(timesTwo);
+
+console.log(nums);
+console.log(doubled);
+
+// console output
+[3.14, 42, 4811]
+[ 6.28, 84, 9622 ]
+
+
+
+//recursion
+function combineEntries(arrayName){
+  if (baseCase is true){
+      //solve last small step
+      //end recursion
+  } else {
+      //call combineEntries again
+  }
+}
+
+
+
+
+//object literals
+let objectName = {key1:value1, key2:value2, key3:value3, ... };
+
+let tortoiseTwo = {
+  species: "Galapagos Tortoise",
+  name: "Patricia",
+  weight: 800,
+  age: 85,
+  diet: ["pumpkins", "lettuce", "cabbage"],
+  sign: function() {
+     return this.name + " is a " + this.species;
+  }
+};
+
+//accessing an object
+let giraffe = {
+  species: "Reticulated Giraffe",
+  name: "Cynthia",
+  weight: 1500,
+  age: 15,
+  diet: "leaves"
+};
+for (item in giraffe) {
+   console.log(item + ", " + giraffe[item]);
+}
+//console prints:
+species, Reticulated Giraffe
+name, Cynthia
+weight, 1500
+age, 15
+diet, leaves
+
+//passing into an object
+let giraffe = {
+  species: "Reticulated Giraffe",
+  name: "Cynthia",
+  weight: 1500,
+  age: 15,
+  diet: "leaves"
+};
+
+function birthday(animal) {
+    animal.age = animal.age + 1;
+    return animal;
+}
+
+console.log(giraffe.age);
+birthday(giraffe);
+console.log(giraffe.age);
+
+
+
